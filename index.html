@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate in jquery</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 200px;
+        background: red;
+        /* display: none; */
+      }
+      a {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Animate in Jquery</h1>
+    <a href="#" class="animate">Animate</a>
+
+    <div class="box">box</div>
+
+    <script src="./js/jquery.js"></script>
+
+    <script>
+      $(function () {
+        $(".animate").click(function () {
+          $(".box").animate(
+            {
+              "margin-left": "500px",
+              width: "100px",
+              padding: "50px",
+            },
+            1000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
